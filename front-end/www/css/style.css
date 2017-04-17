@@ -1,0 +1,21 @@
+/* Empty. Add your own CSS if you like */
+.user{
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+.pane{
+  background-color: #ffffff;
+}
+
+.item-text-wrap{
+
+}
+
+.scroll {
+  margin-top: 45px;
+}
+
+input {
+  padding-left: 10px;
+}

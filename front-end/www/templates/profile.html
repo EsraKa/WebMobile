@@ -1,0 +1,45 @@
+<ion-nav-view name="menuContent" title="Profile">
+  <ion-content>
+  <h3 style="text-align: center;">Votre Profile</h3>
+    <form>
+      <div class="list list-inset">
+        <label class="item item-input">Prénom :
+          <input type="text" ng-model="user.firstname" placeholder="{{ user.firstname }}">
+        </label>
+        <label class="item item-input">Nom :
+          <input type="text" ng-model="user.lastname" placeholder="{{ user.lastname }}">
+        </label>
+
+        <label class="item item-input">Pseudo :
+          <input type="text" ng-model="user.username" placeholder="{{ user.username }}">
+        </label>
+
+        <label class="item item-input">E-mail :
+          <input type="text" ng-model="user.email" placeholder="{{ user.email }}">
+        </label>
+
+        <label class="item item-input">Mot de passe :
+          <input type="password" ng-model="user.password" placeholder="{{ user.password }}">
+        </label>
+
+        <label class="item item-input"> Date de naissance :
+          <input type="date" ng-model="user.birthDate" placeholder="{{ user.birthDate }}">
+        </label>
+
+        <label class="item item-input"> Interets :
+          <input type="text" ng-model="user.interest" placeholder="{{ user.interests }}">
+        </label>
+
+        <label class="item item-input">Description :
+          <textarea cols="10" rows="5" ng-model="user.description" placeholder="{{ user.description }}"></textarea>
+        </label>
+
+      </div>
+      <div class="list list-inset">
+        <button ng-click="" class="button button-block button-dark">
+          Enregistrer les modification
+        </button>
+      </div>
+    </form>
+  </ion-content>
+</ion-nav-view>

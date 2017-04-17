@@ -1,0 +1,18 @@
+<ion-nav-view name="menuContent" title="Users">
+  <ion-content>
+    <ion-refresher on-refresh=""></ion-refresher>
+    <ion-list>
+      <ion-item ng-repeat="user in users">
+        <a class="item item-avatar" href="#">
+          <img src="../img/cover.jpg">
+          <div class="user">{{ user.username }} </div><br>
+          {{ user.description }} <br>
+
+
+        </a>
+
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+</ion-nav-view>

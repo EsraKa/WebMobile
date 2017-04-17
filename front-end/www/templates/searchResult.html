@@ -1,0 +1,31 @@
+<ion-nav-view name="menuContent" title="Users">
+  <ion-content>
+    <ion-refresher on-refresh=""></ion-refresher>
+
+    <div class="list list-inset" ng-if="message">
+      <br>
+
+      <label class="item item-input">
+        <p>{{message}}</p>
+      </label>
+    </div>
+
+    <ion-list ng-if="users.length > 0">
+      <ion-item ng-repeat="user in users">
+        <a class="item item-icon-left" href="#">
+          <i class="icon ion-person"></i>
+          <div class="user">{{ user.username }} </div><br>
+
+          {{ user.email }}
+        </a>
+
+      </ion-item>
+    </ion-list>
+    <div class="list list-inset">
+      <button class="button button-block button-dark" ui-sref="app.search">
+        Retour à la recherche
+      </button>
+    </div>
+  </ion-content>
+
+</ion-nav-view>

@@ -1,0 +1,53 @@
+<ion-nav-view name="menuContent" title="Search">
+  <!--<ion-content>-->
+  <div class="tabs-striped tabs-top tabs-background-calm tabs-color-light">
+    <div class="tabs">
+      <a class="tab-item" ui-sref="app.dashboard">
+        Récent
+      </a>
+      <a class="tab-item active" ui-sref="app.search">
+        Recherche
+      </a>
+    </div>
+  </div>
+
+  <ion-content>
+    <br>
+    <br>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" ng-model="searchObject.findString" placeholder="Recherchez par nom d'utilisateurs">
+      </label>
+    </div>
+
+
+    <div class="list list-inset">
+      <label class="input-label">Interets : </label>
+      <ion-list >
+        <ion-checkbox ng-repeat="item in intCheckbox"
+                      ng-model="intCheckedItem[item.text]">
+                      {{item.text}}
+        </ion-checkbox>
+      </ion-list>
+
+    </div>
+
+    <div class="list list-inset">
+      <ion-list>
+        <div class="row">
+          <div class="col" ng-repeat="item1 in genCheckbox">
+            <ion-checkbox ng-model="genCheckedItem[item1.id]">
+              {{item1.text}}
+            </ion-checkbox>
+          </div>
+        </div>
+      </ion-list>
+    </div>
+
+    <button class="button button-block button-dark" ng-click="search()">
+      Rechercher
+    </button>
+
+  </ion-content>
+</ion-nav-view>

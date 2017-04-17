@@ -1,0 +1,57 @@
+<ion-nav-view name="menuContent" title="Login">
+  <ion-content>
+    <ion-refresher on-refresh=""></ion-refresher>
+
+    <div class="row row-center" >
+      <div class="col text-center" >
+        <img alt="Logo" height="80" src="../img/logo.png" >
+      </div>
+    </div>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="text" ng-model="userLog.email" placeholder="E-mail ou Nom d'utilisateur">
+      </label>
+    </div>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="password" ng-model="userLog.password" placeholder="Mot de passe">
+      </label>
+    </div>
+    <div class="list list-inset" ng-if="message">
+      <label class="item item-input">
+        <p>{{message}}</p>
+      </label>
+    </div>
+
+    <div class="list list-inset">
+      <button class="button button-block button-dark" ng-click="auth()">
+        Connexion
+      </button>
+    </div>
+
+    <div class="card">
+      <div class="item item-text-wrap">
+
+        <div class="col" style="text-align: center;">
+          <p>Vous n'avez toujours pas de compte ? </p>
+        </div>
+        <div class="col">
+          <button class="button button-block button-stable" ui-sref="app.register">
+            Inscription
+          </button>
+        </div>
+        <div class="col">
+          <button class="button button-block button-positive">
+            <i class="icon ion-social-facebook"></i>
+            Inscription par Facebook
+          </button>
+        </div>
+
+
+      </div>
+    </div>
+
+
+  </ion-content>
+</ion-nav-view name="menuContent" title="Login">
+
